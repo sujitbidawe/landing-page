@@ -60,3 +60,23 @@
 // Set sections as active
 
 
+sections = [{name: "section1", isVisible: false}, {name: "section2", isVisible: false}, {name: "section3", isVisible: false}, {name: "section4", isVisible: false}];
+
+function checkElementVisibility() {
+    const visibleSection = sections.find((section) => {
+        const ele = document.getElementById(section.name);
+        const rect = ele.getBoundingClientRect();
+        if( rect.top >= 0 && rect.left >= 0 ){
+            return section;
+        }
+    });
+    visibleSection && sections.forEach(section => {
+        if (section.name === visibleSection.name) {
+            section.isVisible = true;
+        } else {
+            section.isVisible = false;
+        }
+    })
+}
+
+window.addEventListener("scroll", checkElementVisibility);
