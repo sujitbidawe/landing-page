@@ -12,7 +12,7 @@
 /* ---- Base Rules ---- */
 body {
     background: rgb(136,203,171);
-    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    background: linear-gradient(0deg, rgba(67,206,162,1) 0%, rgba(24,90,157,1) 100%);
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
@@ -24,6 +24,14 @@ h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 3em;
     margin: 2em 1rem;
+}
+
+.navbar{
+    background: #56ab2f;
+    height: 50px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
 }
 
 @media only screen and (min-width: 35em){
@@ -72,6 +80,9 @@ section {
 
 .navbar__menu li {
     display: inline-block;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
 }
 
 .navbar__menu .menu__link {
@@ -99,8 +110,8 @@ section {
 
 /* Footer Styles */
 .page__footer {
-    background: #000;
-    padding: 3em;
+    background: rgba(0,30,100,1);
+    padding: 1em;
     color: #fff;
 }
 
