@@ -1,7 +1,21 @@
 # Landing Page Project
 
-This is a basic landing page created with html, css and Javascript for learning purpose.
+Overview: 
 
-To run the website locally, start with opening index.html file in the browser.
+    - The project is made for learning purpose under Udacity course work.
+    - The project consists of a basic webpage that has dynamic nabvar generation based on the contents available on the page.
+    - The content/names/data's rights are reserved with the respective authors.
+  
+Software Requirements:
 
-The website is up and running on : https://sujitbidawe.github.io/landing-page/
+    - Any modern web browser with Javascript enabled.
+
+Technologies used for the project:
+    
+    - HTML
+    - CSS
+    - Javascript
+
+How to run the project:
+    
+    - To run the website locally --> start with opening index.html file in the browser.- To view the working demo   --> https://sujitbidawe.github.io/landing-page/
