@@ -3,23 +3,25 @@ sections = [];
 
 // Function to check element visibility
 function checkElementVisibility() {
+    sections.forEach(section => {
+        section.classList.remove("active__section");
+    })
     const visibleSection = sections.find((section, index) => {
         const ele = document.getElementById(section.id);
         const rect = ele && ele.getBoundingClientRect();
         if( rect && rect.top >= 0 && rect.left >= 0 ){
             section.classList.add("active__section");
             return section;
-        } else if (sections.length == index + 1) {
+        }
+        else if (sections.length == index + 1) {
             section.classList.add("active__section");
             return section;
-        } else {
-            section.classList.remove("active__section");
         }
     });
     removeActiveClassFromNav();
     targetActiveNavId = visibleSection && visibleSection.id + "-link";
     let targetActiveNavEle = document.getElementById(targetActiveNavId);
-    targetActiveNavEle && targetActiveNavEle.classList.add("active")
+    targetActiveNavEle && targetActiveNavEle.classList.add("active");
 }
 
 // Function to remove active class from nav-link
@@ -33,7 +35,6 @@ function scrollToSection(event) {
     const scrollToId = event.target.getAttribute('scroll-to');
     const scrollToNavId = scrollToId + "-link";
     let scrollToNavEle = document.getElementById(scrollToNavId);
-    scrollToNavEle && scrollToNavEle.classList.add("active")
     const scrollToEle = document.getElementById(scrollToId);
     scrollToEle.scrollIntoView({ behavior: "smooth" });
 }
